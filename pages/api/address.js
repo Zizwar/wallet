@@ -13,9 +13,9 @@ export default async ({ query = [] }, res) => {
     h = 0,
     sort = "total_price_usd",
     order = "desc",
-    pUsd24hrs = 455.8,
-    pBtc24hrs = 0.007731,
-    pUsd = 496.17,
+    pUsd24hrs = "",//455.8,
+    pBtc24hrs ="",// 0.007731,
+    pUsd = "",//496.17,
     fav = "",
     langMsg = "A%20total%20of%20XX%20tokenSS%20found",
     langFilter = "Filtered%20by%20XX",
@@ -29,7 +29,7 @@ export default async ({ query = [] }, res) => {
 
   try {
     const data = await Praser(fullUrl, true);
-    //  console.log(data)
+    console.log("##data=>",data)
     const status = data ? "ok" : "no"
     res.json({ data, status })
     // res.json({ resault, status: "ok" })
