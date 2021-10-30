@@ -1,4 +1,4 @@
-
+import Image from 'next/image'
 export default function Home({ resJson = [] }) {
 const {data = []} = resJson;
   return (
@@ -18,7 +18,7 @@ const {data = []} = resJson;
               </div>
             </div>
             <div className="user-profile">
-              <img src="https://pbs.twimg.com/profile_images/834493671785525249/XdLjsJX_.jpg" className="user-photo" />
+              <Image src="https://pbs.twimg.com/profile_images/834493671785525249/XdLjsJX_.jpg"  height="100%"  width="100%" className="user-photo" />
             </div>
           </div>
           <div className="content">
@@ -65,7 +65,7 @@ const {data = []} = resJson;
               </div>
 
               <div className="transaction">
-                <div className="t-icon-container"><img src="https://www.paypalobjects.com/webstatic/icon/pp144.png" className="t-icon" /></div>
+                <div className="t-icon-container"><Image src="https://www.paypalobjects.com/webstatic/icon/pp144.png" className="t-icon" height="100%" width="100%"/></div>
                 <div className="t-details">
                   <div className="t-title">Paypal </div>
                   <div className="t-time">03.45 AM
@@ -76,7 +76,7 @@ const {data = []} = resJson;
               </div>
 
               <div className="transaction">
-                <div className="t-icon-container"><img src="https://cdn.dribbble.com/assets/dribbble-ball-192-ec064e49e6f63d9a5fa911518781bee0c90688d052a038f8876ef0824f65eaf2.png" className="t-icon" /></div>
+                <div className="t-icon-container"><Image src="https://cdn.dribbble.com/assets/dribbble-ball-192-ec064e49e6f63d9a5fa911518781bee0c90688d052a038f8876ef0824f65eaf2.png" height="100%" width="100%" className="t-icon" /></div>
                 <div className="t-details">
                   <div className="t-title">99 designs</div>
                   <div className="t-time">08.00PM
