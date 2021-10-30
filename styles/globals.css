@@ -198,6 +198,10 @@ font-family: 'Montserrat', sans-serif;
   position: relative;
   margin-top: 1.5rem;
   flex-direction: column;
+  
+  overflow: auto;
+  height: 300px;
+
 }
 
 .t-desc {
