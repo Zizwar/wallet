@@ -5,102 +5,102 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
   return (
     <body>
-      <div class="container">
-        <div class="iphone">
-          <div class="header">
-            <div class="header-summary">
-              <div class="summary-text">
+      <div className="container">
+        <div className="iphone">
+          <div className="header">
+            <div className="header-summary">
+              <div className="summary-text">
                 My Balance
               </div>
-              <div class="summary-balance">
+              <div className="summary-balance">
                 $ 293.00
               </div>
-              <div class="summary-text-2">
+              <div className="summary-text-2">
                 +&nbsp;280.00
               </div>
             </div>
-            <div class="user-profile">
-              <img src="https://pbs.twimg.com/profile_images/834493671785525249/XdLjsJX_.jpg" class="user-photo" />
+            <div className="user-profile">
+              <Image src="https://pbs.twimg.com/profile_images/834493671785525249/XdLjsJX_.jpg" className="user-photo" />
             </div>
           </div>
-          <div class="content">
-            <div class="card">
-              <div class="upper-row">
-                <div class="card-item">
+          <div className="content">
+            <div className="card">
+              <div className="upper-row">
+                <div className="card-item">
                   <span>Active Balance</span>
-                  <span>1&nbsp;804 <span class="dollar">$</span></span>
+                  <span>1&nbsp;804 <span className="dollar">$</span></span>
                 </div>
-                <div class="card-item">
+                <div className="card-item">
                   <span>My Save it</span>
-                  <span>2&nbsp;000 <span class="dollar">$</span></span>
+                  <span>2&nbsp;000 <span className="dollar">$</span></span>
                 </div>
               </div>
-              <div class="lower-row">
-                <div class="icon-item">
-                  <div class="icon"><i class="fas fa-upload"></i></div>
-                  <div class="icon-text">Top-up</div>
+              <div className="lower-row">
+                <div className="icon-item">
+                  <div className="icon"><i className="fas fa-upload"></i></div>
+                  <div className="icon-text">Top-up</div>
                 </div>
-                <div class="icon-item">
-                  <div class="icon"><i class="fas fa-money-check-alt"></i></div>
-                  <div class="icon-text">Withdraw</div>
+                <div className="icon-item">
+                  <div className="icon"><i className="fas fa-money-check-alt"></i></div>
+                  <div className="icon-text">Withdraw</div>
                 </div>
-                <div class="icon-item">
-                  <div class="icon"><i class="fal fa-paper-plane"></i></div>
-                  <div class="icon-text">Send</div>
+                <div className="icon-item">
+                  <div className="icon"><i className="fal fa-paper-plane"></i></div>
+                  <div className="icon-text">Send</div>
                 </div>
-                <div class="icon-item">
-                  <div class="icon"><i class="fal fa-wallet"></i></div>
-                  <div class="icon-text">Pay</div>
+                <div className="icon-item">
+                  <div className="icon"><i className="fal fa-wallet"></i></div>
+                  <div className="icon-text">Pay</div>
                 </div>
               </div>
             </div>
-            <div class="transactions"><span class="t-desc">Recent Transactions</span>
-              <div class="transaction">
-                <div class="t-icon-container"></div>
-                <div class="t-details">
-                  <div class="t-title">99 designs</div>
-                  <div class="t-time">03.45PM
+            <div className="transactions"><span className="t-desc">Recent Transactions</span>
+              <div className="transaction">
+                <div className="t-icon-container"></div>
+                <div className="t-details">
+                  <div className="t-title">99 designs</div>
+                  <div className="t-time">03.45PM
                   </div>
                 </div>
-                <div class="t-amount">+&nbsp;750$
+                <div className="t-amount">+&nbsp;750$
                 </div>
               </div>
 
-              <div class="transaction">
-                <div class="t-icon-container"><img src="https://www.paypalobjects.com/webstatic/icon/pp144.png" class="t-icon" /></div>
-                <div class="t-details">
-                  <div class="t-title">Paypal </div>
-                  <div class="t-time">03.45 AM
+              <div className="transaction">
+                <div className="t-icon-container"><Image src="https://www.paypalobjects.com/webstatic/icon/pp144.png" className="t-icon" /></div>
+                <div className="t-details">
+                  <div className="t-title">Paypal </div>
+                  <div className="t-time">03.45 AM
                   </div>
                 </div>
-                <div class="t-amount">+&nbsp;200$
+                <div className="t-amount">+&nbsp;200$
                 </div>
               </div>
 
-              <div class="transaction">
-                <div class="t-icon-container"><img src="https://cdn.dribbble.com/assets/dribbble-ball-192-ec064e49e6f63d9a5fa911518781bee0c90688d052a038f8876ef0824f65eaf2.png" class="t-icon"></div>
-                <div class="t-details">
-                  <div class="t-title">99 designs</div>
-                  <div class="t-time">08.00PM
+              <div className="transaction">
+                <div className="t-icon-container"><Image src="https://cdn.dribbble.com/assets/dribbble-ball-192-ec064e49e6f63d9a5fa911518781bee0c90688d052a038f8876ef0824f65eaf2.png" className="t-icon" /></div>
+                <div className="t-details">
+                  <div className="t-title">99 designs</div>
+                  <div className="t-time">08.00PM
                   </div>
                 </div>
-                <div class="t-amount red">-&nbsp;120$
+                <div className="t-amount red">-&nbsp;120$
                 </div>
               </div>
             </div>
           </div>
-          <div class="drawer">
-            <span><i class="fal fa-home"></i></span>
-            <span><i class="fal fa-chart-bar"></i></span>
-            <div class="menu-btn"><i class="fal fa-plus"></i></div>
+          <div className="drawer">
+            <span><i className="fal fa-home"></i></span>
+            <span><i className="fal fa-chart-bar"></i></span>
+            <div className="menu-btn"><i className="fal fa-plus"></i></div>
             <span></span>
-            <span><i class="fal fa-sticky-note"></i> </span>
-            <span><i class="fal fa-user"></i> </span>
+            <span><i className="fal fa-sticky-note"></i> </span>
+            <span><i className="fal fa-user"></i> </span>
           </div>
 
         </div>
       </div>
-      <div class="footer"></div>
+      <div className="footer"></div>
     </body>
   )
 }
