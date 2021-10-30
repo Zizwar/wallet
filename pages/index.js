@@ -1,5 +1,6 @@
 
-export default function Home() {
+export default function Home({ resJson = [] }) {
+const {data = []} = resJson;
   return (
     <body>
       <div className="container">
@@ -10,7 +11,7 @@ export default function Home() {
                 My Balance
               </div>
               <div className="summary-balance">
-                $ 293.00
+                {data.meta?.totalusd}
               </div>
               <div className="summary-text-2">
                 +&nbsp;280.00
@@ -100,4 +101,12 @@ export default function Home() {
       <div className="footer"></div>
     </body>
   )
+}
+export async function getStaticProps() {
+  const res = await fetch(`https://wallet.sloughi.io/api/address?a=${process.env.ADDRESS}`)
+  const resJson = await res.json()
+
+  return {
+    props:  {resJson} , // will be passed to the page component as props
+  }
 }
