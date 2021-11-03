@@ -1,11 +1,37 @@
 import Image from "next/image";
-
+import React, { useState, useRef } from "react";
 export default function Home({ resJson = [] }) {
-  const { data = [] } = resJson;
+  const [address, setAddress] = useState('');
+  const [res, setRes] = useState(resJson);
+  const inputRef = useRef();
+
+  const submitHandler = async (e) => {
+
+    e.preventDefault();
+    // setAddress(inputRef.current.value);
+
+    try {
+
+      const resJson = await getWallet(inputRef.current.value);
+      setRes(resJson)
+      // alert(JSON.stringify(resJson))
+      //console.log({resJson})
+    } catch (error) {
+      console.error(error);
+    }
+
+  }
+
+
+  const { data = [] } = res;
   return (
     <body>
       <div className="container">
         <div className="iphone">
+          <form onSubmit={submitHandler}>
+            <input placeholder="0xdef90xxxxxxxxxxxxxxxxxxx" style={{ width: '70%' }} ref={inputRef} />
+            <input type="submit" value="Swith" />
+          </form>
           <div className="header">
             <div className="header-summary">
               <div className="summary-text">My Balance</div>
@@ -32,14 +58,14 @@ export default function Home({ resJson = [] }) {
                 <div className="card-item">
                   <span>Active Balance</span>
                   <span>
-                    
+
                     {data.meta?.totaleth} <span className="dollar">BNB</span>
                   </span>
                 </div>
                 <div className="card-item">
                   <span>My Save it</span>
                   <span>
-                    
+
                     {data.meta?.totalusd}
                     <span className="dollar">$</span>
                   </span>
@@ -133,11 +159,17 @@ export default function Home({ resJson = [] }) {
     </body>
   );
 }
-export async function getStaticProps() {
+async function getWallet(address, fullUrl) {
+  const baseUrl = fullUrl ? "https://wallet.sloughi.io" : "";
   const res = await fetch(
-    `https://wallet.sloughi.io/api/address?a=${process.env.ADDRESS}`
+    `${baseUrl}/api/address?a=${address || process.env.ADDRESS}`
   );
   const resJson = await res.json();
+  return resJson;
+}
+export async function getServerSideProps(ctx) {
+
+  const resJson = await getWallet(ctx?.query?.a || process.env.ADDRESS,true);
 
   return {
     props: { resJson }, // will be passed to the page component as props
